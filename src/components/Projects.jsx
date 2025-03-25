@@ -63,7 +63,7 @@ const ProjectCard = ({project}) => {
 const Projects = () => {
   return (
     <div id="projects" 
-      className="flex min-h-screen w-full flex-col items-center justify-center gap-16
+      className="flex min-h-screen w-full flex-col items-center justify-center gap-12
       p-4 md:px-14 md:py-24"
     >
       <h1 className="text-4xl font-light md:text-6xl">

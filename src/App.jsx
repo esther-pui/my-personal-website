@@ -9,15 +9,15 @@ function App() {
   
   return (
     <>
-      <div className="min-h-screen w-full bg-[#f4f4f4]">
+      <div className="min-h-screen w-full bg-[#f4f4f4] snap-y snap-mandatory overflow-y-scroll h-screen">
         <main className="flex flex-col items-center px-2 md:px-8 lg:px-16">
-          <Navbar />
-          <Hero />
-          <WorkEdu />
-          <Tech />
+        <section className="snap-start w-full"><Navbar /></section>
+        <section className="snap-start w-full"><Hero /></section>
+        <section className="snap-start w-full"><WorkEdu /></section>
+        <section className="snap-start w-full"><Tech /></section>
           
-          <Projects />
-          <Contact />
+        <section className="snap-start w-full"><Projects /></section>
+        <section className="snap-start w-full"><Contact /></section>
         </main>
       </div>
     </>

@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 
 export const Navbar = () => {
   return (
-    <div className="py-10 fixed bottom-0 place-content-center">
+    <div className="py-10 fixed bottom-0 left-1/2 -translate-x-1/2 w-full flex justify-center">
       <SlideTabs />
     </div>
-  )
-}
+  );
+};
 
 const SlideTabs = () => {
   const [position, setPosition] = useState({
