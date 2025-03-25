@@ -26,10 +26,10 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_gwk7y2u",   // Replace with your actual Service ID
-        "template_dxuhkao",  // Replace with your actual Template ID
+        "service_gwk7y2u",
+        "template_dxuhkao",
         formData,
-        "yN1JNoC614oTyz_SP"    // Replace with your actual Public Key
+        "yN1JNoC614oTyz_SP"
       )
       .then(() => {
         setIsSent(true);
