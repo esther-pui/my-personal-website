@@ -1,48 +1,93 @@
 // import image from "../assets/image.jpeg"
 import { motion } from "framer-motion"
+import { BiLogoGithub, BiLogoLinkedin } from "react-icons/bi"
+import { FiDownload } from "react-icons/fi"
 
 const Hero = () => {
   return (
     <div 
       id="home" 
-      className="px-8 md:px-16 flex min-h-screen w-full items-center
-        justify-center py-28 md:px-32"
+      className="px-16 flex min-h-screen w-full items-center
+        justify-center"
     >
       <div className="flex flex-col items-center justify-center gap-4 text-black">
-        {/* <motion.div
-          initial={{y: -50, opacity: 0}}
-          animate={{y: 0, opacity: 1}}
-          transition={{duration: 0.8, delay: 0.2}}
-        >
-          <img 
-            src={image} 
-            alt="" 
-            className="w-[300px] cursor-pointer rounded-full shadow-xl
-            shadow-indigo-900 transition-all duration-300 hover:-translate-y-5 hover:scale-105 hover:shadow-2xl 
-            hover:shadow-indigo-600 md:w-[350px]" 
-          />
-        </motion.div> */}
-
-        <motion.div 
+        <div 
           initial={{y: 50, opacity: 0}}
           animate={{y: 0, opacity: 1}}
           transition={{duration: 0.8, delay: 0.2}}
           className="flex md:max-w-[800px] flex-col  justify-center gap-3 "
         >
-          <h1 className="text-4xl font-semibold text-center md:text-6xl">
-            <span className="hidden md:inline">Hey, I'm </span>0xagu
-          </h1>
+          <motion.h1
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 }
+            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.5 }}
+            className="text-4xl font-light text-center md:text-6xl" 
+          >
+            <span className="hidden md:inline">Hey, I'm </span>Esther Pui
+          </motion.h1>
 
-          <h3 className="text-xl font-semibold font-light text-center md:text-3xl">
+          <motion.h3 
+            className="text-xl font-semibold text-center md:text-3xl"
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 }
+            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.5 }}
+          >
             Full-stack Web Developer
-          </h3>
-          <p className="text-pretty text-xs text-center md:text-base md:text-justify">
-            Specializing in ⚡ Laravel and ⚛️ React, she builds seamless front-end experiences with a well-structured backend.  
-            
-            She integrates APIs, optimizes databases, and enjoys blending technology with creativity. In her free time, she explores 3D coding and illustration design as a hobby.
-          </p>
+          </motion.h3>
 
-        </motion.div>
+          <motion.div 
+            className="flex gap-6 justify-center pb-6 md:py-8"
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 }
+            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.5 }}
+          >
+            <a href="https://github.com/0xagu" target="_blank" rel="noopener noreferrer">
+              <BiLogoGithub className="text-2xl md:text-2xl hover:text-gray-600 transition-colors" />
+            </a>
+            <a href="https://www.linkedin.com/in/esther-pui/" target="_blank" rel="noopener noreferrer">
+              <BiLogoLinkedin className="text-2xl md:text-2xl hover:text-gray-600 transition-colors" />
+            </a>
+            {/* <a href="/publicResume.pdf" download="esther_pui_resume.pdf" target="_blank" rel="noopener noreferrer">
+              <FiDownload className="text-xl md:text-2xl hover:text-gray-600 transition-colors"/>
+            </a> */}
+          </motion.div>
+         
+          <motion.p 
+            className="text-pretty text-xs md:text-base text-justify"
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 }
+            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.5 }} 
+          >
+            Based in Kuala Lumpur, specializing in ⚡ Laravel and ⚛️ React.
+
+            Her expertise ensures the platform follows best practices for both frontend and backend, with a robust backend that meets security, performance, and scalability standards, delivering a seamless user experience.  
+
+
+            <br></br><br></br>
+            Currently working at Zuno AI on a business management platform that simplifies and manage business operations. Contributing to backend development and system integration, she writes backend logic, integrates frontend components, connects APIs, and designs database tables to ensure secure, scalable systems.  
+
+           
+            <br></br><br></br>
+            In her spare time, she enjoys watching movies, hanging out with her cat, drawing illustrations, and exploring 3D design and technology trends.
+          </motion.p>
+
+        </div>
       </div>
     </div>
   )
