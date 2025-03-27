@@ -34,7 +34,7 @@ const Contact = () => {
   };
 
   return ( 
-    <div id="contact" className="flex min-h-[100dvh] w-full flex-col items-center justify-center gap-12 px-6 md:px-14">
+    <div id="contact" className="flex min-h-[100dvh] w-full flex-col items-center justify-center gap-6 sm:gap-6 md:gap-8 md:px-10 px-6">
       <motion.h1
         variants={{
           hidden: { opacity: 0, y: 50 },
@@ -68,6 +68,7 @@ const Contact = () => {
         </a> */}
       </motion.div>
       
+     
       <motion.form
         variants={{
           hidden: { opacity: 0, y: 50 },
@@ -115,11 +116,16 @@ const Contact = () => {
 
       {isSent && <p className="text-green-500">Message sent successfully!</p>}
 
-      <footer className="w-full h-[100px] text-center py-8 px-4 text-sm">
+      <p className="w-full text-center text-[2vw] sm:text-[1vw] md:text-[1vw] lg:text-[1vw] xl:text-[0.7vw]">
+        Website designed and developed by yours truly in Mar, 2025.
+      </p>
+      
+     
+      {/* <footer className="w-full text-center text-[3vw] sm:text-[3vw] md:text-[3vw] lg:text-[3vw] xl:text-[3vw]">
         <p>
           Website designed and developed by yours truly in Mar, 2025.
         </p>
-      </footer>
+      </footer> */}
     </div>
   );
 };
