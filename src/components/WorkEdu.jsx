@@ -22,25 +22,25 @@ const JourneyCard = ({ data }) => (
     initial="hidden"
     whileInView="visible"
     transition={{ duration: 0.3, delay: 0.1 }}
-    className="w-full text-sm md:text-base py-2 border-b border-gray-300"
+    className="w-full md:text-base py-2 border-b border-gray-300"
   >
-    <p className="font-medium">
+    <p className="text-[3vw] sm:text-[2vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw]">
       {data.company} - <span className="text-gray-600">{data.position}</span>
     </p>
-    <p className="text-gray-500">{data.duration}</p>
-    {data.skills && <p className="mt-1 text-gray-700 text-xs md:text-sm">{data.skills.join(" • ")}</p>}
+    <p className="text-gray-500 text-[3vw] sm:text-[2vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw]">{data.duration}</p>
+    {data.skills && <p className="mt-1 text-gray-700 text-[3vw] sm:text-[2vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw]">{data.skills.join(" • ")}</p>}
   </motion.div>
 );
 
 const WorkEdu = () => {
   return (
-    <div id="experience" className="w-full min-h-screen flex flex-col items-center justify-center text-black gap-2 md:gap-8 md:px-40 px-14">
+    <div id="experience" className="w-full min-h-screen flex flex-col items-center justify-center text-black gap-6 sm:gap-6 md:gap-8 md:px-10 px-6">
       <motion.h1
         variants={variants}
         initial="hidden"
         whileInView="visible"
         transition={{ duration: 0.5 }}
-        className="text-4xl font-light md:text-6xl"
+        className="text-[8vw] sm:text-[8vw] md:text-[5vw] lg:text-[4vw] xl:text-[3vw]"
       >
         Journey
       </motion.h1>
@@ -51,11 +51,11 @@ const WorkEdu = () => {
         initial="hidden"
         whileInView="visible"
         transition={{ duration: 0.5 }}
-        className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 p-5 gap-4"
+        className="w-full max-w-4xl grid grid-cols-2 gap-10"
       >
         {/* Left Column: Jobs */}
         <div className="flex flex-col gap-2 pb-5">
-          <h2 className="text-lg font-semibold pb-1">Work</h2>
+          <h2 className="font-semibold pb-1 text-[3vw] sm:text-[2vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw]">Work</h2>
           {latestToOldest
             .filter((item) => item.category === "job")
             .map((experience, index) => (
@@ -65,7 +65,7 @@ const WorkEdu = () => {
 
         {/* Right Column: Education */}
         <div className="flex flex-col gap-2">
-          <h2 className="text-lg font-semibold pb-1">Education</h2>
+          <h2 className="font-semibold pb-1 text-[3vw] sm:text-[2vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw]">Education</h2>
           {latestToOldest
             .filter((item) => item.category === "school")
             .map((experience, index) => (

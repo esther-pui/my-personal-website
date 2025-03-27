@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { Send } from "lucide-react";
-
+import { BiLogoGithub, BiLogoLinkedin } from "react-icons/bi"
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -34,7 +34,7 @@ const Contact = () => {
   };
 
   return ( 
-    <div id="contact" className="flex min-h-screen w-full flex-col items-center justify-center gap-12 md:px-14">
+    <div id="contact" className="flex min-h-screen w-full flex-col items-center justify-center gap-12 px-6 md:px-14">
       <motion.h1
         variants={{
           hidden: { opacity: 0, y: 50 },
@@ -43,10 +43,31 @@ const Contact = () => {
         initial="hidden"
         whileInView="visible"
         transition={{ duration: 0.5 }}
-        className="text-4xl font-light md:text-6xl">
+        className="text-[8vw] sm:text-[8vw] md:text-[5vw] lg:text-[4vw] xl:text-[3vw]">
           Stay In Touch
       </motion.h1>
 
+      <motion.div 
+        className="flex gap-6 justify-center"
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0 }
+        }}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.5 }}
+      >
+        <a href="https://github.com/0xagu" target="_blank" rel="noopener noreferrer">
+          <BiLogoGithub className="text-[5vw] sm:text-[5vw] md:text-[4vw] lg:text-[4vw] xl:text-[2vw] hover:text-gray-600 transition-colors" />
+        </a>
+        <a href="https://www.linkedin.com/in/esther-pui/" target="_blank" rel="noopener noreferrer">
+          <BiLogoLinkedin className="text-[5vw] sm:text-[5vw] md:text-[4vw] lg:text-[4vw] xl:text-[2vw] hover:text-gray-600 transition-colors" />
+        </a>
+        {/* <a href="/publicResume.pdf" download="esther_pui_resume.pdf" target="_blank" rel="noopener noreferrer">
+          <FiDownload className="text-xl md:text-2xl hover:text-gray-600 transition-colors"/>
+        </a> */}
+      </motion.div>
+      
       <motion.form
         variants={{
           hidden: { opacity: 0, y: 50 },

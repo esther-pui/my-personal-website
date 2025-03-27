@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div 
       id="home" 
-      className="px-16 flex min-h-screen w-full items-center
+      className="px-6 flex min-h-screen w-full items-center
         justify-center"
     >
       <div className="flex flex-col items-center justify-center gap-4 text-black">
@@ -15,7 +15,7 @@ const Hero = () => {
           initial={{y: 50, opacity: 0}}
           animate={{y: 0, opacity: 1}}
           transition={{duration: 0.8, delay: 0.2}}
-          className="flex md:max-w-[800px] flex-col  justify-center gap-3 "
+          className="flex md:max-w-[800px] flex-col  justify-center gap-1 sm:gap-3 md:gap-3 "
         >
           <motion.h1
             variants={{
@@ -25,13 +25,13 @@ const Hero = () => {
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.5 }}
-            className="text-4xl font-light text-center md:text-6xl" 
+             className="font-light text-center text-[8vw] sm:text-[8vw] md:text-[5vw] lg:text-[4vw] xl:text-[3vw]"
           >
             <span className="hidden md:inline">Hey, I'm </span>Esther Pui
           </motion.h1>
 
           <motion.h3 
-            className="text-xl font-semibold text-center md:text-3xl"
+            className="font-semibold text-center text-[4vw] sm:text-[4vw] md:text-[5vw] lg:text-[4vw] xl:text-[3vw]"
             variants={{
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0 }
@@ -44,7 +44,7 @@ const Hero = () => {
           </motion.h3>
 
           <motion.div 
-            className="flex gap-6 justify-center pb-6 md:py-8"
+            className="flex gap-6 justify-center py-2 sm:py-4 md:py-8"
             variants={{
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0 }
@@ -54,10 +54,10 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
           >
             <a href="https://github.com/0xagu" target="_blank" rel="noopener noreferrer">
-              <BiLogoGithub className="text-2xl md:text-2xl hover:text-gray-600 transition-colors" />
+              <BiLogoGithub className="text-[3vw] sm:text-[3vw] md:text-[2vw] lg:text-[2vw] xl:text-[1.5vw] hover:text-gray-600 transition-colors" />
             </a>
             <a href="https://www.linkedin.com/in/esther-pui/" target="_blank" rel="noopener noreferrer">
-              <BiLogoLinkedin className="text-2xl md:text-2xl hover:text-gray-600 transition-colors" />
+              <BiLogoLinkedin className="text-[3vw] sm:text-[3vw] md:text-[2vw] lg:text-[2vw] xl:text-[1.5vw] hover:text-gray-600 transition-colors" />
             </a>
             {/* <a href="/publicResume.pdf" download="esther_pui_resume.pdf" target="_blank" rel="noopener noreferrer">
               <FiDownload className="text-xl md:text-2xl hover:text-gray-600 transition-colors"/>
@@ -65,7 +65,7 @@ const Hero = () => {
           </motion.div>
          
           <motion.p 
-            className="text-pretty text-xs md:text-base text-justify"
+            className="text-pretty text-justify text-[3vw] sm:text-[2vw] md:text-[2vw] lg:text-[1.2vw] xl:text-[1vw]"
             variants={{
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0 }
