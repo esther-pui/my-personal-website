@@ -34,7 +34,7 @@ const Contact = () => {
   };
 
   return ( 
-    <div id="contact" className="flex min-h-screen w-full flex-col items-center justify-center gap-12 px-6 md:px-14">
+    <div id="contact" className="flex min-h-[100dvh] w-full flex-col items-center justify-center gap-12 px-6 md:px-14">
       <motion.h1
         variants={{
           hidden: { opacity: 0, y: 50 },

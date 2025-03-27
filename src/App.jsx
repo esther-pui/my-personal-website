@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-      <div className="relative min-h-screen w-full bg-[#f4f4f4] snap-y snap-mandatory overflow-y-scroll h-screen">
+      <div className="relative min-h-[100dvh] w-full bg-[#f4f4f4] snap-y snap-mandatory overflow-y-scroll h-screen">
         {/* Navigation Bar */}
         {/* <motion.nav
           className="fixed top-1/2 right-4 transform -translate-y-1/2 flex flex-col gap-4 p-2 rounded-lg"

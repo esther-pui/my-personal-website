@@ -70,7 +70,7 @@ const ProjectCard = ({project}) => {
 const Projects = () => {
   return (
     <div 
-      className="flex min-h-screen w-full flex-col items-center justify-center gap-6 sm:gap-6 md:gap-2 lg:gap-12
+      className="flex min-h-[100dvh] w-full flex-col items-center justify-center gap-6 sm:gap-6 md:gap-2 lg:gap-12
       p-4 px-6 md:px-20 md:py-24"
     >
       <motion.h1

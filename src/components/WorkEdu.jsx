@@ -34,7 +34,7 @@ const JourneyCard = ({ data }) => (
 
 const WorkEdu = () => {
   return (
-    <div id="experience" className="w-full min-h-screen flex flex-col items-center justify-center text-black gap-6 sm:gap-6 md:gap-8 md:px-10 px-6">
+    <div id="experience" className="w-full min-h-[100dvh] flex flex-col items-center justify-center text-black gap-6 sm:gap-6 md:gap-8 md:px-10 px-6">
       <motion.h1
         variants={variants}
         initial="hidden"

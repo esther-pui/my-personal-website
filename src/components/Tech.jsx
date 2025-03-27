@@ -26,7 +26,7 @@ const Tech = () => {
   return (
     <div
       id="tech"
-      className="flex min-h-screen w-full flex-col items-center justify-center gap-12 px-6 md:px-40"
+      className="flex min-h-[100dvh] w-full flex-col items-center justify-center gap-12 px-6 md:px-40"
     >
       <motion.h1
         variants={{
