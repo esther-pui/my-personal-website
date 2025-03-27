@@ -54,7 +54,9 @@ function App() {
           <section id="tech" className="snap-start w-full"><Tech /></section>
           <section id="contact" className="snap-start w-full"><Contact /></section>
         </main>
-        <section id="footer" className="snap-start w-full"><Footer /> </section>
+        <section id="footer" className="snap-start w-full h-[100px] flex items-center justify-center bg-black text-white">
+          <Footer />
+        </section>
       </div>
     </>
   );
