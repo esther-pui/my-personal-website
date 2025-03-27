@@ -18,45 +18,26 @@ const sections = [
 ];
 
 function App() {
-  const [active, setActive] = useState("");
-
-  const scrollToSection = (id) => {
-    setActive(id);
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <>
-      <div className="relative min-h-[100dvh] w-full bg-[#f4f4f4] snap-y snap-mandatory overflow-y-scroll h-screen">
-        {/* Navigation Bar */}
-        {/* <motion.nav
-          className="fixed top-1/2 right-4 transform -translate-y-1/2 flex flex-col gap-4 p-2 rounded-lg"
-        >
-          {sections.map((section) => (
-            <motion.button
-              key={section.id}
-              onClick={() => scrollToSection(section.id)}
-              whileHover={{ scale: 1.2 }}
-              className={`p-2 rounded-lg ${
-                active === section.id ? "bg-gray-800 text-white" : "bg-gray-100 text-gray-700"
-              }`}
-            >
-              {section.icon}
-            </motion.button>
-          ))}
-        </motion.nav> */}
-
-        <main className="flex flex-col items-center px-2 md:px-8 lg:px-16">
-          {/* <section className="snap-start w-full"><Navbar /></section> */}
-          <section id="hero" className="snap-start w-full"><Hero /></section>
-          <section id="projects" className="snap-start w-full"><Projects /></section>
-          <section id="workedu" className="snap-start w-full"><WorkEdu /></section>
-          <section id="tech" className="snap-start w-full"><Tech /></section>
-          <section id="contact" className="snap-start w-full"><Contact /></section>
+      <div className="relative w-full bg-[#f4f4f4] snap-y snap-mandatory overflow-y-auto h-[100dvh]">
+        <main className="flex flex-col items-center">
+          <section id="hero" className="snap-center snap-always w-full h-[100dvh] flex items-center justify-center">
+            <Hero />
+          </section>
+          <section id="projects" className="snap-center snap-always w-full h-[100dvh] flex items-center justify-center">
+            <Projects />
+          </section>
+          <section id="workedu" className="snap-center snap-always w-full h-[100dvh] flex items-center justify-center">
+            <WorkEdu />
+          </section>
+          <section id="tech" className="snap-center snap-always w-full h-[100dvh] flex items-center justify-center">
+            <Tech />
+          </section>
+          <section id="contact" className="snap-center snap-always w-full h-[100dvh] flex items-center justify-center">
+            <Contact />
+          </section>
         </main>
-        {/* <section id="footer" className="snap-start w-full h-[100px] flex items-center justify-center bg-black text-white">
-          <Footer />
-        </section> */}
       </div>
     </>
   );
