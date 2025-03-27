@@ -7,7 +7,7 @@ import Tech from './components/Tech';
 import WorkEdu from './components/WorkEdu';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 const sections = [
   { id: "hero", icon: <Home size={20} />, label: "Home" },
@@ -54,9 +54,9 @@ function App() {
           <section id="tech" className="snap-start w-full"><Tech /></section>
           <section id="contact" className="snap-start w-full"><Contact /></section>
         </main>
-        <section id="footer" className="snap-start w-full h-[100px] flex items-center justify-center bg-black text-white">
+        {/* <section id="footer" className="snap-start w-full h-[100px] flex items-center justify-center bg-black text-white">
           <Footer />
-        </section>
+        </section> */}
       </div>
     </>
   );

@@ -114,6 +114,12 @@ const Contact = () => {
       </motion.form>
 
       {isSent && <p className="text-green-500">Message sent successfully!</p>}
+
+      <footer className="w-full h-[100px] text-center py-8 px-4 text-sm">
+        <p>
+          Website designed and developed by yours truly in Mar, 2025.
+        </p>
+      </footer>
     </div>
   );
 };
