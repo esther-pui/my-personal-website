@@ -1,6 +1,4 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { Home, Briefcase, GraduationCap, Code, Folder, Mail } from "lucide-react";
+import { Home, Briefcase, Code, Folder, Mail } from "lucide-react";
 // import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Tech from './components/Tech';
@@ -25,15 +23,15 @@ function App() {
           <section id="hero" className="snap-center snap-always w-full h-[100dvh] flex items-center justify-center">
             <Hero />
           </section>
-          <section id="projects" className="snap-center snap-always w-full h-[100dvh] flex items-center justify-center">
-            <Projects />
-          </section>
           <section id="workedu" className="snap-center snap-always w-full h-[100dvh] flex items-center justify-center">
             <WorkEdu />
           </section>
-          <section id="tech" className="snap-center snap-always w-full h-[100dvh] flex items-center justify-center">
-            <Tech />
+          <section id="projects" className="snap-center snap-always w-full h-[100dvh] flex items-center justify-center">
+            <Projects />
           </section>
+          {/* <section id="tech" className="snap-center snap-always w-full h-[100dvh] flex items-center justify-center">
+            <Tech />
+          </section> */}
           <section id="contact" className="snap-center snap-always w-full h-[100dvh] flex items-center justify-center">
             <Contact />
           </section>

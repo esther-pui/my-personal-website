@@ -6,9 +6,10 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 const projectsData = [
   {
     image: project1,
-    title: "Skin & Spoon",
-    description: "An expiration management app helps users track expiry dates for food, medications, products, and warranties, set reminders, avoid waste, get AI-driven suggestions for leftovers, manage a shared shopping list, and collaborate with others by adding members to the list. ",
-    technologies:["laravel","react","mysql", "vercel"],
+    title: "WasteNot+",
+    year: '2025',
+    description: "An expiration management app allows users to easily monitor the shelf life of their food, set timely reminders, reduce waste, receive AI-powered recommendations for using up leftovers, manage a collaborative shopping list, and invite others to join and contribute to the list.",
+    technologies:["laravel", "react", "inertia.js","mysql", "tailwind", "laravel breeze"],
     website:"www.google.com"
   }
 ]
@@ -33,21 +34,21 @@ const ProjectCard = ({project}) => {
           alt="" 
           // className="w-full cursor-pointer rounded-2xl transition-all duration-300 hover:scale-105 md:w-[500px] md:h-full object-cover"
           className="cursor-pointer rounded-lg transition-all duration-300 hover:scale-105 object-cover
-          w-full sm:w-[500px] md:w-[60vh] lg:w-[60vh] xl:w-[500px]"
+          w-full sm:w-[60vh] md:w-[60vh] lg:w-[60vh] xl:w-[500px]"
         />
 
         {/* Content Section */}
         <div className="flex flex-col gap-5 md:h-full md:flex-1">
           <div className="flex flex-col">
-            <div className="text-[4vw] sm:text-[4vw] md:text-[3vw] lg:text-[2vw] xl:text-[2vw] font-semibold">{project?.title}</div>
-            <div className="text-[3vw] sm:text-[2vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw] text-pretty md:text-base text-justify">{project?.description}</div>
+            <div className="text-[3vw] sm:text-[4vw] md:text-[3vw] lg:text-[2vw] xl:text-[2vw] font-semibold">{project?.title} ({project?.year})</div>
+            <div className="text-[2vw] sm:text-[2vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw] text-pretty md:text-base text-justify">{project?.description}</div>
           </div>
 
           <div className="flex flex-wrap gap-1 md:gap-5 ">
             {
               project?.technologies?.map((tech, index) => (
-                <span key={index} className="rounded-lg bg-black text-white justify-center py-1 px-3 flex  min-w-[60px] md:min-w-[100px] 
-                text-[3vw] sm:text-[3vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw]
+                <span key={index} className="rounded-sm md:rounded-lg lg:rounded-lg xl:rounded-lg bg-black text-white justify-center py-1 px-3 flex  min-w-[60px] md:min-w-[100px] 
+                text-[2vw] sm:text-[2vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw]
                    ">
                   {tech}
                 </span>
@@ -55,12 +56,27 @@ const ProjectCard = ({project}) => {
             }
           </div>
 
-          <div className="flex flex-wrap gap-5">
-            <span className="border-2 border-black text-black p-3 rounded-lg flex items-center w-full md:w-[400px] justify-center hover:bg-black hover:text-white transition-colors">
-              <a href={project?.website} target="_blank" rel="noopener noreferrer" className="flex items-center text-[3vw] sm:text-[3vw] md:text-[3vw] lg:text-[1vw] xl:text-[1vw]">
-                Live View <AiOutlineArrowRight className="ml-2" />
-              </a>
-            </span>
+          <div className="flex gap-3">
+            <div className="flex flex-wrap gap-5 w-full">
+              <span className="border-2 border-black text-black p-3 rounded-lg flex items-center justify-center hover:bg-black hover:text-white transition-colors w-full md:w-[400px]">
+                <a
+                  href={project?.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-full text-[3vw] sm:text-[3vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw]"
+                >
+                  Live View <AiOutlineArrowRight className="ml-2" />
+                </a>
+              </span>
+            </div>
+
+            {/* <div className="flex flex-wrap gap-5">
+              <span className="border-2 border-black text-black p-3 rounded-lg flex items-center w-full md:w-[400px] justify-center hover:bg-black hover:text-white transition-colors">
+                <a href={project?.website} target="_blank" rel="noopener noreferrer" className="flex items-center text-[3vw] sm:text-[3vw] md:text-[3vw] lg:text-[1vw] xl:text-[1vw]">
+                  Video Demo <AiOutlineArrowRight className="ml-2" />
+                </a>
+              </span>
+            </div> */}
           </div>
         </div>
       </div>
@@ -83,7 +99,7 @@ const Projects = () => {
         transition={{ duration: 0.5 }}
         className="font-light text-[8vw] sm:text-[8vw] md:text-[5vw] lg:text-[4vw] xl:text-[3vw]"
       >
-        My Projects
+        Project
       </motion.h1>
 
       <motion.div

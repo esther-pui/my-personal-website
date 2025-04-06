@@ -1,6 +1,6 @@
 // import image from "../assets/image.jpeg"
 import { motion } from "framer-motion"
-import { BiLogoGithub, BiLogoLinkedin } from "react-icons/bi"
+import { BiLogoGithub, BiLogoLinkedin, BiLogoLinkedinSquare } from "react-icons/bi"
 import { FiDownload } from "react-icons/fi"
 
 const Hero = () => {
@@ -53,19 +53,19 @@ const Hero = () => {
             whileInView="visible"
             transition={{ duration: 0.5 }}
           >
-            <a href="https://github.com/0xagu" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/esther-pui/" target="_blank" rel="noopener noreferrer" title="Esther's LinkedIn Profile">
+              <BiLogoLinkedinSquare className="w-[4vw] sm:w-[4vw] md:w-[3vw] lg:w-[3vw] xl:w-[1.5vw] h-[4vw] sm:h-[4vw] md:h-[3vw] lg:h-[3vw] xl:h-[1.5vw] hover:text-gray-600 transition-colors" />
+            </a>
+            {/* <a href="https://github.com/0xagu" target="_blank" rel="noopener noreferrer" title="Esther's Github Account">
               <BiLogoGithub className="text-[3vw] sm:text-[3vw] md:text-[2vw] lg:text-[2vw] xl:text-[1.5vw] hover:text-gray-600 transition-colors" />
-            </a>
-            <a href="https://www.linkedin.com/in/esther-pui/" target="_blank" rel="noopener noreferrer">
-              <BiLogoLinkedin className="text-[3vw] sm:text-[3vw] md:text-[2vw] lg:text-[2vw] xl:text-[1.5vw] hover:text-gray-600 transition-colors" />
-            </a>
-            {/* <a href="/publicResume.pdf" download="esther_pui_resume.pdf" target="_blank" rel="noopener noreferrer">
-              <FiDownload className="text-xl md:text-2xl hover:text-gray-600 transition-colors"/>
             </a> */}
+            <a href="/Esther Pui - Full-Stack Web Developer Resume (Public version 1, 2025).pdf" download="Esther Pui_Full-Stack Web Developer Resume.pdf" target="_blank" rel="noopener noreferrer" title="Esther's PDF Resume">
+              <FiDownload className="w-[4vw] sm:w-[4vw] md:w-[3vw] lg:w-[3vw] xl:w-[1.5vw] h-[4vw] sm:h-[4vw] md:h-[3vw] lg:h-[3vw] xl:h-[1.5vw] hover:text-gray-600 transition-colors" />
+            </a>
           </motion.div>
          
           <motion.p 
-            className="text-pretty text-justify text-[3vw] sm:text-[2vw] md:text-[2vw] lg:text-[1.2vw] xl:text-[1vw]"
+            className="text-pretty text-justify text-[2vw] sm:text-[2vw] md:text-[2vw] lg:text-[1.2vw] xl:text-[1vw]"
             variants={{
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0 }
