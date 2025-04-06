@@ -24,11 +24,11 @@ const JourneyCard = ({ data }) => (
     transition={{ duration: 0.3, delay: 0.1 }}
     className="w-full md:text-base py-2 border-b border-gray-300"
   >
-    <p className="text-[2vw] sm:text-[2vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw]">
+    <p className="text-[2.5vw] sm:text-[2vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw]">
       {data.company} - <span className="text-gray-600">{data.position}</span>
     </p>
-    <p className="text-gray-500 text-[2vw] sm:text-[2vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw]">{data.duration}</p>
-    {data.skills && <p className="mt-1 text-gray-700 text-[2vw] sm:text-[2vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw]">{data.skills.join(" • ")}</p>}
+    <p className="text-gray-500 text-[2vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw]">{data.duration}</p>
+    {data.skills && <p className="mt-1 text-gray-700 text-[2.5vw] sm:text-[2vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw]">{data.skills.join(" • ")}</p>}
   </motion.div>
 );
 

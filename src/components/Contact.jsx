@@ -76,7 +76,7 @@ const Contact = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="text-base text-center font-medium">
+            <span className="text-base text-center text-[3vw] lg:text-[1vw]">
               Connect with me on LinkedIn
             </span>
           </div>
@@ -93,10 +93,10 @@ const Contact = () => {
         transition={{ duration: 0.5 }} 
         className="flex flex-col items-center w-full gap-5"
       >
-        <p className="text-sm text-gray-500">— or —</p>
-        <div className="text-base font-medium">Send me a message</div>
+        <p className="text-[3vw] lg:text-[1vw] text-gray-500">— or —</p>
+        <div className="text-base text-[3vw] lg:text-[1vw]">Send me a message</div>
 
-        <form onSubmit={sendEmail} className="flex flex-col w-full max-w-[500px] gap-4">
+        <form onSubmit={sendEmail} className="flex flex-col w-full max-w-[500px] text-[3vw] lg:text-[1vw] gap-4">
           <input
             type="text"
             name="user_name"
@@ -136,7 +136,7 @@ const Contact = () => {
           >
             {isLoading ? (
               <motion.div
-                className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"
+                className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin text-[3vw] lg:text-[1vw]"
               />
             ) : (
               <>

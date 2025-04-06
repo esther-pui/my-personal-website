@@ -40,15 +40,15 @@ const ProjectCard = ({project}) => {
         {/* Content Section */}
         <div className="flex flex-col gap-5 md:h-full md:flex-1">
           <div className="flex flex-col">
-            <div className="text-[3vw] sm:text-[4vw] md:text-[3vw] lg:text-[2vw] xl:text-[2vw] font-semibold">{project?.title} ({project?.year})</div>
-            <div className="text-[2vw] sm:text-[2vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw] text-pretty md:text-base text-justify">{project?.description}</div>
+            <div className="text-[2.5vw] sm:text-[4vw] md:text-[3vw] lg:text-[2vw] xl:text-[2vw] font-semibold">{project?.title} ({project?.year})</div>
+            <div className="text-[2.5vw] sm:text-[2vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw] text-pretty md:text-base text-justify">{project?.description}</div>
           </div>
 
           <div className="flex flex-wrap gap-1 md:gap-5 ">
             {
               project?.technologies?.map((tech, index) => (
                 <span key={index} className="rounded-sm md:rounded-lg lg:rounded-lg xl:rounded-lg bg-black text-white justify-center py-1 px-3 flex  min-w-[60px] md:min-w-[100px] 
-                text-[2vw] sm:text-[2vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw]
+                text-[2.5vw] sm:text-[2vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw]
                    ">
                   {tech}
                 </span>

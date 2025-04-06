@@ -65,7 +65,7 @@ const Hero = () => {
           </motion.div>
          
           <motion.p 
-            className="text-pretty text-justify text-[2vw] sm:text-[2vw] md:text-[2vw] lg:text-[1.2vw] xl:text-[1vw]"
+            className="text-pretty text-justify text-[2.5vw] sm:text-[2vw] md:text-[2vw] lg:text-[1.2vw] xl:text-[1vw]"
             variants={{
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0 }
