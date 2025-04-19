@@ -53,15 +53,24 @@ const Hero = () => {
             whileInView="visible"
             transition={{ duration: 0.5 }}
           >
-            <a href="https://www.linkedin.com/in/esther-pui/" target="_blank" rel="noopener noreferrer" title="Esther's LinkedIn Profile">
-              <BiLogoLinkedinSquare className="w-[4vw] sm:w-[4vw] md:w-[3vw] lg:w-[3vw] xl:w-[1.5vw] h-[4vw] sm:h-[4vw] md:h-[3vw] lg:h-[3vw] xl:h-[1.5vw] hover:text-gray-600 transition-colors" />
-            </a>
+            {/* <a href="https://www.linkedin.com/in/esther-pui/" target="_blank" rel="noopener noreferrer" title="Esther's LinkedIn Profile" className="text-[2.5vw] sm:text-[2vw] md:text-[2vw] lg:text-[1.2vw] xl:text-[1vw] hover:text-gray-600 transition-colors">
+              LinkedIn Profile
+            </a> */}
             {/* <a href="https://github.com/0xagu" target="_blank" rel="noopener noreferrer" title="Esther's Github Account">
               <BiLogoGithub className="text-[3vw] sm:text-[3vw] md:text-[2vw] lg:text-[2vw] xl:text-[1.5vw] hover:text-gray-600 transition-colors" />
             </a> */}
-            <a href="/Esther Pui - Full-Stack Web Developer Resume (Public version 1, 2025).pdf" download="Esther Pui_Full-Stack Web Developer Resume.pdf" target="_blank" rel="noopener noreferrer" title="Esther's PDF Resume">
-              <FiDownload className="w-[4vw] sm:w-[4vw] md:w-[3vw] lg:w-[3vw] xl:w-[1.5vw] h-[4vw] sm:h-[4vw] md:h-[3vw] lg:h-[3vw] xl:h-[1.5vw] hover:text-gray-600 transition-colors" />
+            <a 
+              href="/Esther Pui - Full-Stack Web Developer Resume (Public, 2025).pdf" 
+              download="Esther Pui_Full-Stack Web Developer Resume.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              title="Esther's PDF Resume" 
+              className="flex items-center text-[2.5vw] sm:text-[2vw] md:text-[2vw] lg:text-[1.2vw] xl:text-[1vw] hover:text-gray-600 transition-colors"
+            >
+              Download Resume
+              {/* <FiDownload className="w-[3vw] sm:w-[3vw] md:w-[2vw] lg:w-[2vw] xl:w-[1vw] h-[3vw] sm:h-[3vw] md:h-[2vw] lg:h-[2vw] xl:h-[1vw] ml-2 hover:text-gray-600 transition-colors" /> */}
             </a>
+
           </motion.div>
          
           <motion.p 

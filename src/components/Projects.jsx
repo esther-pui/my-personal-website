@@ -6,11 +6,12 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 const projectsData = [
   {
     image: project1,
-    title: "WasteNot+",
+    title: "Skin & Spoon",
     year: '2025',
-    description: "An expiration management app allows users to easily monitor the shelf life of their food, set timely reminders, reduce waste, receive AI-powered recommendations for using up leftovers, manage a collaborative shopping list, and invite others to join and contribute to the list.",
+    status: 'ongoing',
+    description: "An expiration tracker app helps users monitor food shelf life, get reminders, reduce waste, get AI recipe suggestions, manage a shared shopping list, and collaborate with others.",
     technologies:["laravel", "react", "inertia.js","mysql", "tailwind", "laravel breeze"],
-    website:"www.google.com"
+    website:"https://skin-and-spoon.onrender.com/"
   }
 ]
 
@@ -40,7 +41,24 @@ const ProjectCard = ({project}) => {
         {/* Content Section */}
         <div className="flex flex-col gap-5 md:h-full md:flex-1">
           <div className="flex flex-col">
-            <div className="text-[2.5vw] sm:text-[4vw] md:text-[3vw] lg:text-[2vw] xl:text-[2vw] font-semibold">{project?.title} ({project?.year})</div>
+          <div className="text-[2.5vw] sm:text-[4vw] md:text-[3vw] lg:text-[2vw] xl:text-[2vw] font-semibold">
+            {project?.title} ({project?.year}) 
+            {project?.status && (
+              <span className="pl-1 text-[2vw] sm:text-[2vw] md:text-[1vw] lg:text-[1vw] xl:text-[1vw] font-light italic">
+                <motion.span
+                  animate={{ opacity: [1, 0, 1] }}
+                  transition={{
+                    duration: 1,
+                    repeat: Infinity,
+                    repeatType: 'loop',
+                  }}
+                >
+                  *
+                </motion.span>
+                {project?.status}
+              </span>
+            )}
+          </div>
             <div className="text-[2.5vw] sm:text-[2vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw] text-pretty md:text-base text-justify">{project?.description}</div>
           </div>
 

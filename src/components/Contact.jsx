@@ -148,14 +148,9 @@ const Contact = () => {
       </motion.div>
 
       <p className="w-full text-center text-[2vw] sm:text-[1vw] md:text-[1vw] lg:text-[1vw] xl:text-[0.7vw]">
-        Website designed and developed by yours truly in Mar, 2025.
+        Website designed and developed by yours truly. Last updated April, 2025.
       </p>
       
-      {/* <footer className="w-full text-center text-[3vw] sm:text-[3vw] md:text-[3vw] lg:text-[3vw] xl:text-[3vw]">
-        <p>
-          Website designed and developed by yours truly in Mar, 2025.
-        </p>
-      </footer> */}
     </div>
   );
 };
