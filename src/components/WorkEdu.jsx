@@ -7,7 +7,8 @@ const variants = {
 };
 
 const latestToOldest = [
-  { company: "Zuno AI", position: "Junior Web Developer", duration: "Dec 2023 - Present", category: "job", skills: ["ReactJS", "Laravel v8+", "MySQL", "MVC", "Git" ] },
+  { company: "TreeHole Story Enterprise", position: "Web Developer (Freelance)", duration: "May 2025 - Present", category: "job", skills: ["NextJS", "Laravel v12", "OOP", "Docker", "Bruno", "Github" ] },
+  { company: "Zuno AI", position: "Junior Web Developer", duration: "Dec 2023 - Present", category: "job", skills: ["ReactJS", "Laravel v8+", "MySQL", "MVC", "Bitbucket" ] },
   { company: "ARC Academy", position: "Japanese Language (Career Break)", duration: "Oct 2022 - Oct 2023", category: "school" },
   { company: "Fourtitude Asia", position: "Junior Application Developer", duration: "Oct 2021 - Sept 2022", category: "job", skills: ["Vue.js", "Tailwind", "Adobe Experience Manager", "Agile/Scrum", "Jira"] },
   { company: "Penang Hill Corporation", position: "IT Intern", duration: "Jul 2020 - Sept 2020", category: "job", skills: ["PHP7", "MySQL", "JavaScript", "HTML", "CSS", "Bootstrap"] },
