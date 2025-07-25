@@ -1,14 +1,14 @@
 {
   "redirects": [
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "has": [
         {
           "type": "host",
           "value": "estherpui.vercel.app"
         }
       ],
-      "destination": "https://portfolio.estherpui.com/:1",
+      "destination": "https://portfolio.estherpui.com/:path*",
       "permanent": true
     }
   ]
