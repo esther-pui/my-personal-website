@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "estherpui.vercel.app"
+        }
+      ],
+      "destination": "https://portfolio.estherpui.com/:1",
+      "permanent": true
+    }
+  ]
+}
