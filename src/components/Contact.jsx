@@ -30,7 +30,12 @@ const Contact = () => {
         "yN1JNoC614oTyz_SP"
       )
       .then(() => {
-        setFormData({ user_name: "", user_email: "", message: "" });
+        setFormData({
+          from_name: "",
+          reply_to: "",
+          message: ""
+        });
+
         toast.success("Email sent successfully!");
       })
       .catch((error) => {
@@ -99,18 +104,18 @@ const Contact = () => {
         <form onSubmit={sendEmail} className="flex flex-col w-full max-w-[500px] text-[3vw] lg:text-[1vw] gap-4">
           <input
             type="text"
-            name="user_name"
+            name="from_name"
             placeholder="Your Name"
-            value={formData.user_name}
+            value={formData.from_name}
             onChange={handleChange}
             required
             className="p-2 border border-gray-300 rounded-md"
           />
           <input
             type="email"
-            name="user_email"
+            name="reply_to"
             placeholder="Your Email"
-            value={formData.user_email}
+            value={formData.reply_to}
             onChange={handleChange}
             required
             className="p-2 border border-gray-300 rounded-md"
