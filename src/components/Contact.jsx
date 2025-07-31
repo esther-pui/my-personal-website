@@ -7,8 +7,8 @@ import toast from 'react-hot-toast';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    user_name: "",
-    user_email: "",
+    from_name: "",
+    reply_to: "",
     message: "",
   });
 
